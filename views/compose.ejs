@@ -1,0 +1,40 @@
+<%- include("partials/header"); -%>
+
+<style>
+  .compose-search-and-button {
+    margin-left: 550px;
+  }
+
+  /* .searchBox {
+    width: 70%;
+  }
+  .comment {
+    height: 224px;
+    width: 1408px;
+  } */
+</style>
+
+<form action="/compose" method="post">
+  <div class="compose-search-and-button">
+    <div class="form-group">
+      <h1>Compose</h1>
+      <label for="Title">Title</label>
+      <br />
+      <input class="form-control" type="text" id="title" name="postTitle" />
+      <br />
+      <label for="Post">Post</label>
+      <br />
+      <textarea
+        class="form-control"
+        id="comment"
+        name="postBody"
+        rows="5"
+        cols="30"
+      ></textarea>
+      <br />
+      <button class="btn btn-primary" type="submit">Publish</button>
+    </div>
+  </div>
+</form>
+
+<%- include("partials/footer"); -%>
